@@ -1,4 +1,6 @@
 const pocet = prompt('Kolik kusů chcete objednat?');
+let cenaZaKus;
+
 if(pocet<50)
 {
     cenaZaKus = 300;
