@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	/* 	Napište funkci fillcut, která jako svůj první parametr str očekává řetězec a jako druhý parametr len kladné celé číslo. Úkolem funkce je oříznout nebo prodloužit zadaný řetězec tak, aby měl délku přesně len.
+		- Pokud je vstupní řetězec delší než len, tak funkce odřízne jeho konec a vrátí výsledek.
+		- Pokud je vstupní řetězec kratší než len, tak jej doplní od začátku znakem tečky a vrátí výsledek. 
+		- Pokud je vstupní řetězec dlouhý přesně len, funkce jej vrátí beze změny. */
+
+		const fillcut = (str, len) => {
+			if(str.length > len) {
+				return str.slice(0, len);			
+			}
+
+			else if (str.length < len) {
+				const pocetTecek = len - str.length;
+				const tecky = '.'.repeat(pocetTecek);
+				return tecky + str;
+			}
+			else {
+				return str;
+			}
+		}
+
+		console.log(fillcut("adriana", 5));
+		console.log(fillcut("adriana", 10));
+		console.log(fillcut("adriana", 7));
+
+
+
+	</script>
+</body>
+</html>
