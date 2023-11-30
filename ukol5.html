@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		/* Vytvořte funkci salary se třemi parametry
+
+wage - hrubá mzda v korunách za hodinu
+hours - kolik hodin denně průměrně pracujete
+days - kolik dní v měsící průměrně pracujete
+Funkce spočítá vaši hrubou měsíční mzdu v celých korunách.
+
+Dále vytvořte funkci taxed, která na vstupu obdrží částku a procento zdanění, a vrátí částku v celých korunách zdaněnou podle zadaných procent.
+
+Použítím funkcí salary a taxed spočítejte svoji měsíční mzdu po 15% zdanění. */
+
+
+const wage = 200;  
+const hours = 8;
+const days = 20;
+
+// Funkce SALARY (hrubá měsíční mzda)
+function salary(wage, hours, days) {
+    const hrubaMesicniMzda = wage * hours * days;
+    return hrubaMesicniMzda;
+}
+
+// Funkce TAXED (zdaněná čistá mzda)
+function taxed(castka, procentoZdaneni) {
+    const cistaMzda = castka * (1 - procentoZdaneni / 100);
+    return cistaMzda;
+}
+
+
+// Výpočet hrubé měsíční mzdy
+const hrubaMesicniMzda = salary(wage, hours, days);
+
+// Výpočet čisté měsíční mzdy po zdanění
+const procentoZdaneni = 15;
+const cistaMzda = taxed(hrubaMesicniMzda, procentoZdaneni);
+
+console.log(`Hrubá měsíční mzda: ${hrubaMesicniMzda} Kč`);
+console.log(`Čistá měsíční mzda: ${cistaMzda} Kč (po zdanění ${procentoZdaneni} %).`);
+
+	</script>
+</body>
+</html>
