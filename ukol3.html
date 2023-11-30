@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		/* Bez použití knihovny Day.js napište funkci parseDate, která na vstupu obdrží řetězec obsahující datum 
+		ve formátu DD.MM.YYYY a vrátí objekt s jednotlivýnu částmi zadaného data. 
+		
+		Příklad použití:
+		
+		parseDate('12.03.2015'); // → { day: 12, month: 3, year: 2015 }
+		parseDate('06.04.2021'); // → { day: 6, month: 4, year: 2021 } */
+
+		const datum = "27.12.2023";
+
+		const parseDate = (datum) => {
+			const castiData = datum.split(".");
+
+			const den = parseInt(castiData[0]);
+			const mesic = parseInt(castiData[1]);
+			const rok = parseInt(castiData[2]);
+
+			return {
+				den,
+				mesic,
+				rok
+			};
+		}
+
+		const vysledek = parseDate(datum);
+		console.log(vysledek);
+
+
+	</script>
+</body>
+
+</html>
