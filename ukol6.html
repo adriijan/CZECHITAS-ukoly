@@ -18,9 +18,7 @@
 			}
 
 			else if (str.length < len) {
-				const pocetTecek = len - str.length;
-				const tecky = '.'.repeat(pocetTecek);
-				return tecky + str;
+				return str.padStart(len, ".");
 			}
 			else {
 				return str;
