@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// funkce pro jednotlivé firmy
+		const justFoodCatering = (pocetLidi) => {
+			return `catering od Just Food pro ${pocetLidi} lidí za ${pocetLidi * 100} Kč.`;
+		};
+
+		const yourMamaCatering = (pocetLidi) => {
+			return `catering od Your Mama pro ${pocetLidi} lidí za ${pocetLidi * 500} Kč.`;
+		};
+
+		const flavourHeavenCatering = (pocetLidi) => {
+			return `catering od Flavour Heaven pro ${pocetLidi} lidí za ${pocetLidi * 3000} Kč.`;
+		};
+
+		console.log(justFoodCatering(100));
+		console.log(yourMamaCatering(100));
+		console.log(flavourHeavenCatering(100)); 
+
+		// funkce pro vytvoření události
+
+		const createEvent = (nazev, pocetLidi, cateringFunction) => {
+			return `Událost ${nazev} s ${cateringFunction(pocetLidi)}`;
+		};
+
+		console.log(createEvent("Inaugurace prezidenta", 100, justFoodCatering));
+		console.log(createEvent("Inaugurace prezidenta", 100, yourMamaCatering));
+		console.log(createEvent("Inaugurace prezidenta", 100, flavourHeavenCatering));
+
+	</script>
+</body>
+</html>
